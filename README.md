@@ -14,7 +14,7 @@ The user can run the server using docker by using the following commands
 
 ```bash
 docker pull j1roscope/assignment
-docker run docker.io/j1roscope/assignment
+docker run -p 5000:5000 docker.io/j1roscope/assignment
 ```
 the docker image can also be found at 
 https://hub.docker.com/repository/docker/j1roscope/assignment
@@ -24,22 +24,12 @@ The user will need docker to be installed in their machine. Please refer to the 
 ### 2. Run manually 
 To run the code manually using python the user needs to ensure that python and tesseract-ocr is installed on their machine
 
-#### Debian/ Ubuntu
+#### Linux
 Run the following commands to install Tesseract-ocr3  on debian linux or ubuntu
 
 ```bash
-sudo apt update
 sudo apt install -y tesseract-ocr  tesseract-ocr-eng  libtesseract-dev libleptonica-dev 
 
-```
-
-#### Fedora
-```bash 
-sudo dnf install tesseract
-```
-#### Arch linux
-```
-sudo pacman -S tesseract
 ```
 #### Windows
 Download tesseract exe from [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki).
@@ -65,8 +55,10 @@ python -m venv ./venv
 	```bash 
 	pip install -r requirements.txt
 	```
-4. run the ```server.py``` file
-	```python server.py```
+4. run the ```server.py``` file using 
+	```bash
+	python server.py
+	```
 
 ## Testing 
 This repo contains code for testing the API end points.
