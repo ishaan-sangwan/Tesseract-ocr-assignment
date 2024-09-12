@@ -24,22 +24,12 @@ The user will need docker to be installed in their machine. Please refer to the 
 ### 2. Run manually 
 To run the code manually using python the user needs to ensure that python and tesseract-ocr is installed on their machine
 
-#### Debian/ Ubuntu
+#### Linux
 Run the following commands to install Tesseract-ocr3  on debian linux or ubuntu
 
 ```bash
-sudo apt update
 sudo apt install -y tesseract-ocr  tesseract-ocr-eng  libtesseract-dev libleptonica-dev 
 
-```
-
-#### Fedora
-```bash 
-sudo dnf install tesseract
-```
-#### Arch linux
-```
-sudo pacman -S tesseract
 ```
 #### Windows
 Download tesseract exe from [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki).
