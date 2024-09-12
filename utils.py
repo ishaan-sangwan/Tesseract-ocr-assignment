@@ -62,7 +62,6 @@ def extract_bounding_boxes(image, level):
     '''
 
     df = pt.image_to_data(image, output_type=pt.Output.DATAFRAME)
-    print(level)
     df = df[df['level']==level]
     boxes = []
 

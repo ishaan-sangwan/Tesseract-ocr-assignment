@@ -10,17 +10,16 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Install pip requirements
-# RUN apt-get update
-RUN apt-get update && apt-get install -y \
+RUN apt-get update
+RUN apt-get install -y \
     tesseract-ocr \
     tesseract-ocr-eng \
     libtesseract-dev \
     libleptonica-dev \
     && apt-get clean
 
-    
+
 COPY requirements.txt .
-RUN python -c 'print("done")'
 RUN pip install -r requirements.txt
 
 

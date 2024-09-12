@@ -3,7 +3,7 @@ from PIL import Image
 import requests
 from base64 import b64encode
 import utils
-url = 'http://localhost:5000'
+url = 'http://0.0.0.0:5000'
 
 valid_image = ''
 with open("1.jpg", 'rb') as f:
@@ -90,6 +90,6 @@ class Test_BBox_API(unittest.TestCase):
             resp = requests.post(url+"/api/get-bboxes", json={'base64_image':valid_image, 'bbox_type':type})
             self.assertEqual(resp.status_code, 200)
             self.assertEqual(resp.headers['Content-Type'], 'application/json')
-            self.assertEqual(resp.json()['success':True])
+            self.assertEqual(resp.json()['success'],True)
 if __name__ == "__main__":
     unittest.main()

@@ -47,7 +47,6 @@ def get_bboxes():
         return jsonify({'success':True, 'result':{"bboxes":boxes}})
     
     except KeyError:
-        # print(KeyError)
         return jsonify({"success":False, "error":{"message":"Invalid bbox_type."}})
             
     except (UnidentifiedImageError , ValueError):
