@@ -14,7 +14,7 @@ The user can run the server using docker by using the following commands
 
 ```bash
 docker pull j1roscope/assignment
-docker run docker.io/j1roscope/assignment
+docker run -p 5000:5000 docker.io/j1roscope/assignment
 ```
 the docker image can also be found at 
 https://hub.docker.com/repository/docker/j1roscope/assignment
