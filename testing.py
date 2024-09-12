@@ -85,7 +85,7 @@ class Test_BBox_API(unittest.TestCase):
         self.assertEqual(resp.headers['Content-Type'], 'application/json')
         self.assertDictEqual(expected, resp.json())
 
-    def valid_image(self):
+    def test_valid_image(self):
         for type in utils.BBOX_TYPES:
             resp = requests.post(url+"/api/get-bboxes", json={'base64_image':valid_image, 'bbox_type':type})
             self.assertEqual(resp.status_code, 200)
