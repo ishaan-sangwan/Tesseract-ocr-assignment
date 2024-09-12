@@ -55,8 +55,10 @@ python -m venv ./venv
 	```bash 
 	pip install -r requirements.txt
 	```
-4. run the ```server.py``` file
-	```python server.py```
+4. run the ```server.py``` file using 
+	```bash
+	python server.py
+	```
 
 ## Testing 
 This repo contains code for testing the API end points.
